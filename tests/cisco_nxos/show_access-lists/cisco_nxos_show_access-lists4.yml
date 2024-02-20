@@ -1,0 +1,14 @@
+---
+parsed_sample:
+  - action: "permit"
+    destination: "any"
+    destination_port: ""
+    list_type: "IPV4"
+    modifier: ""
+    name: "any"
+    protocol: "ip"
+    range: ""
+    remark: ""
+    sn: "10"
+    source: "any"
+    source_port: ""

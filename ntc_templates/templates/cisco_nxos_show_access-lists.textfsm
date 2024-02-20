@@ -32,7 +32,7 @@ Value REMARK (.*)
 
 Start
   # ACL name is matched not starting with space. FILLDOWN, other line's inherit last NAME
-  ^${LIST_TYPE}.*\slist\s+${NAME}$$
+  ^${LIST_TYPE}.*\s(access list|ACL)\s+${NAME}$$
   # Catch remarks as uniq type, capture Action first and then Action=remark
   ^\s+${SN}\s+${ACTION}\s -> Continue
   ^\s+${SN}\s+remark\s${REMARK}$$ -> Record
