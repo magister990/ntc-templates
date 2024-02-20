@@ -7,6 +7,7 @@
 #	SEQUENCE_NUMBER ACTION SOURCE DESTINATION [MODIFIER]
 #
 Value Filldown NAME (.*)
+Value Filldown LIST_TYPE (\w+)
 Value Required SN (\d+)
 Value ACTION (\w+)
 Value PROTOCOL ([^any][\w+\d+]+)
@@ -15,7 +16,14 @@ Value SOURCE ([\w+\d+]+\.[\w+\d+]+\.[\w+\d+]+\s[\w+\d+]+\.[\w+\d+]+\.[\w+\d+]+|a
 # RANGE RegEx catches the first and last protocol to match in the interval range.
 Value RANGE (\S+\s\S+)
 # We can specify protocols to match. 'eq', 'gt', 'lt' and 'neq' are supported.
-Value PORT (eq\s\S+|gt\s\S+|lt\s\S+|neq\s\S+)
+Value SOURCE_PORT (eq\s\S+|gt\s\S+|lt\s\S+|neq\s\S+)
+# We can specify protocols to match. 'eq', 'gt', 'lt' and 'neq' are supported.
+Value DESTINATION_PORT (eq\s\S+|gt\s\S+|lt\s\S+|neq\s\S+)
+#
+# We can specify protocols to match. 'eq', 'gt', 'lt', 'range' and 'neq' are supported.
+#
+#Value OPERATOR_SOURCE_PORT (eq|gt|lt|neq|range)
+#Value OPERATOR_DESTINATION_PORT (eq|gt|lt|neq|range)
 # SOURCE RegEx must be able to catch both MAC and IP addresses including masks. 'any' and 'address group' are possible too.
 Value DESTINATION ([\w+\d+]+\.[\w+\d+]+\.[\w+\d+]+\s[\w+\d+]+\.[\w+\d+]+\.[\w+\d+]+|any|\d+\.\d+\.\d+\.\d+/\d+|addrgroup\s\S+|\S+)
 # What it remains is some ACL modifier used to do fancy stuff.
@@ -24,12 +32,12 @@ Value REMARK (.*)
 
 Start
   # ACL name is matched not starting with space. FILLDOWN, other line's inherit last NAME
-  ^[^\s].*\slist\s+${NAME}$$
+  ^${LIST_TYPE}.*\slist\s+${NAME}$$
   # Catch remarks as uniq type, capture Action first and then Action=remark
   ^\s+${SN}\s+${ACTION}\s -> Continue
   ^\s+${SN}\s+remark\s${REMARK}$$ -> Record
   # This line matches all the possible combination of fields specifed above.
-  ^\s+${SN}\s+${ACTION}(\s+${PROTOCOL})*\s+${SOURCE}(\s+${PORT})*(\s+range\s${RANGE})*\s+${DESTINATION}(\s+${MODIFIER})* -> Record
+  ^\s+${SN}\s+${ACTION}(\s+${PROTOCOL})*\s+${SOURCE}(\s+${SOURCE_PORT})*(\s+range\s${RANGE})*\s+${DESTINATION}(\s+${DESTINATION_PORT})*(\s+${MODIFIER})* -> Record
   # Drop lines we are not interested in
   ^\s+statistics per-entry
   ^\s*$$

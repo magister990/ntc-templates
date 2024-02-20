@@ -1,0 +1,9 @@
+IP access list copp-system-p-acl-radius
+        10 permit udp any any eq 1812 
+        20 permit udp any any eq 1813 
+        30 permit udp any any eq 1645 
+        40 permit udp any any eq 1646 
+        50 permit udp any eq 1812 any 
+        60 permit udp any eq 1813 any 
+        70 permit udp any eq 1645 any 
+        80 permit udp any eq 1646 any 
