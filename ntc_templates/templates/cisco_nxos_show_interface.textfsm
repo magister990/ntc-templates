@@ -26,6 +26,7 @@ Start
   ^${INTERFACE}\s+is\s+${LINK_STATUS},\sline\sprotocol\sis\s${ADMIN_STATE}$$
   ^${INTERFACE}\s+is\s+${LINK_STATUS}$$
   ^admin\s+state\s+is\s+${ADMIN_STATE},
+  ^admin\s+state\s+is\s+${ADMIN_STATE}$$
   ^\s+Hardware(:|\s+is)\s+${HARDWARE_TYPE},\s+address(:|\s+is)\s+${MAC_ADDRESS}(.*bia\s+${BIA})*
   ^\s+Description:\s+${DESCRIPTION}\s*$$
   ^\s+Internet\s+Address\s+is\s+${IP_ADDRESS}\/${PREFIX_LENGTH}
