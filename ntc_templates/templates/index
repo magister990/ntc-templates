@@ -33,10 +33,16 @@ alcatel_sros_oam_mac-ping.textfsm, .*, alcatel_sros, oam mac-pi[[ng]]
 alcatel_sros_show_port.textfsm, .*, alcatel_sros, show port
 alcatel_sros_show_lag.textfsm, .*, alcatel_sros, show lag
 
+allied_telesis_awplus_show_lldp_neighbors_detail.textfsm, .*, allied_telesis_awplus, sh[[ow]] ll[[dp]] n[[eighbors]] d[[etail]]
+allied_telesis_awplus_show_etherchannel_summary.textfsm, .*, allied_telesis_awplus, sh[[ow]] e[[therchannel]] s[[ummary]]
+allied_telesis_awplus_show_interface_switchport.textfsm, .*, allied_telesis_awplus, sh[[ow]] in[[terface]] s[[witchport]]
 allied_telesis_awplus_show_static-channel-group.textfsm, .*, allied_telesis_awplus, sh[[ow]] st[[atic-channel-group]]
 allied_telesis_awplus_show_mac_address-table.textfsm, .*, allied_telesis_awplus, sh[[ow]] mac a[[ddress-table]]
+allied_telesis_awplus_show_interface.textfsm, .*, allied_telesis_awplus, sh[[ow]] in[[terface]]
+allied_telesis_awplus_show_ip_route.textfsm, .*, allied_telesis_awplus, sh[[ow]] ip ro[[ute]]
 allied_telesis_awplus_show_vlan_all.textfsm, .*, allied_telesis_awplus, sh[[ow]] vl[[an]] al[[l]]
 allied_telesis_awplus_show_system.textfsm, .*, allied_telesis_awplus, sh[[ow]] sy[[stem]]
+allied_telesis_awplus_show_arp.textfsm, .*, allied_telesis_awplus, sh[[ow]] ar[[p]]
 
 arista_eos_show_mac_security_participants_detail.textfsm, .*, arista_eos, sh[[ow]] ma[[c]] secu[[rity]] part[[icipants]] det[[ail]]
 arista_eos_show_interfaces_transceiver_detail.textfsm, .*, arista_eos, sh[[ow]] inte[[rfaces]] tr[[ansceiver]] de[[tail]]
@@ -534,12 +540,12 @@ ericsson_ipos_show_isis_adjacency.textfsm, .*, ericsson_ipos, sh[[ow]] isis adja
 ericsson_ipos_show_version.textfsm, .*, ericsson_ipos, sh[[ow]] ver[[sion]]
 ericsson_ipos_show_arp.textfsm, .*, ericsson_ipos, sh[[ow]] ar[[p]]
 
-extreme_show_ports_information_detail.textfsm, .*, extreme, show ports information detail
-extreme_show_ports_description.textfsm, .*, extreme, show ports description
-extreme_show_ports_information.textfsm, .*, extreme, show ports information
-extreme_show_vlan_description.textfsm, .*, extreme, show vlan description
-extreme_show_ipconfig.textfsm, .*, extreme, show ipconfig
-extreme_show_sharing.textfsm, .*, extreme, show sharing
+extreme_exos_show_ports_information_detail.textfsm, .*, extreme_exos, show ports information detail
+extreme_exos_show_ports_description.textfsm, .*, extreme_exos, show ports description
+extreme_exos_show_ports_information.textfsm, .*, extreme_exos, show ports information
+extreme_exos_show_vlan_description.textfsm, .*, extreme_exos, show vlan description
+extreme_exos_show_ipconfig.textfsm, .*, extreme_exos, show ipconfig
+extreme_exos_show_sharing.textfsm, .*, extreme_exos, show sharing
 
 fortinet_get_system_interface_physical.textfsm, .*, fortinet, g[[et]] sy[[stem]] in[[terface]] p[[hysical]]
 fortinet_get_router_info_bgp_summary.textfsm, .*, fortinet, g[[et]] r[[outer]] info bg[[p]] su[[mmary]]
@@ -580,7 +586,10 @@ hp_procurve_show_vlans.textfsm, .*, hp_procurve, sh[[ow]] vl[[ans]]
 hp_procurve_show_arp.textfsm, .*, hp_procurve, sh[[ow]] ar[[p]]
 hp_procurve_show_ip.textfsm, .*, hp_procurve, sh[[ow]] ip
 
+huawei_smartax_display_ont_info_summary_ont.textfsm:huawei_smartax_display_ont_info_summary_sn.textfsm, .*, huawei_smartax, di[[splay]] ont i[[nfo]] su[[mmary]] \S+ *$
 huawei_smartax_display_ont_info_fsp.textfsm:huawei_smartax_display_ont_info_description.textfsm, .*, huawei_smartax, di[[splay]] ont i[[nfo]] \S+ *$
+huawei_smartax_display_sysman_service_state.textfsm, .*, huawei_smartax, di[[splay]] sysman s[[ervice]] s[[tate]]
+huawei_smartax_display_board_serial-number.textfsm, .*, huawei_smartax, di[[splay]] bo[[ard]] s[[erial-number]]\s*
 huawei_smartax_display_ont_info_by-sn_sn.textfsm, .*, huawei_smartax, di[[splay]] ont i[[nfo]] by-sn \S+
 huawei_smartax_display_ont_autofind.textfsm, .*, huawei_smartax, di[[splay]] ont a[[utofind]]\s*
 huawei_smartax_display_temperature.textfsm, .*, huawei_smartax, di[[splay]] tem[[perature]]\s*
@@ -590,6 +599,7 @@ huawei_smartax_display_version.textfsm, .*, huawei_smartax, di[[splay]] ver[[sio
 huawei_smartax_display_board.textfsm, .*^, huawei_smartax, di[[splay]] bo[[ard]]\s*
 huawei_smartax_display_cpu.textfsm, .*, huawei_smartax, di[[splay]] cpu\s*
 huawei_smartax_display_mem.textfsm, .*, huawei_smartax, di[[splay]] mem[[ory]]\s*
+
 
 huawei_vrp_display_traffic-filter_applied-record.textfsm, .*, huawei_vrp, dis[[play]] traffic-filter applied-record
 huawei_vrp_display_ip_vpn-instance_interface.textfsm, .*, huawei_vrp, di[[splay]] ip vpn[[-instance]] interface
@@ -642,6 +652,7 @@ linux_ip_vrf_show.textfsm, .*, linux, ip v[[rf]] [[show]]
 linux_arp_-a.textfsm, .*, linux, arp -a
 
 mikrotik_routeros_routing_ospf_neighbor_print_terse_without-paging.textfsm, .*, mikrotik_routeros, [[/]]r[[outing]] o[[spf]] nei[[ghbor]] p[[rint]] t[[erse]] wi[[thout-paging]]
+mikrotik_routeros_routing_bgp_peer_print_status_without-paging.textfsm, .*, mikrotik_routeros, [[/]]r[[outing]] bg[[p]] p[[eer]] p[[rint]] s[[tatus]] wi[[thout-paging]]
 mikrotik_routeros_interface_ethernet_poe_print_without-paging.textfsm, .*, mikrotik_routeros, [[/]]in[[terface]] et[[hernet]] po[[e]] pr[[int]] wi[[thout-paging]]
 mikrotik_routeros_ip_firewall_filter_print_all_without-paging.textfsm, .*, mikrotik_routeros, [[/]]ip(v6)? firewall filter print( all)? without-paging
 mikrotik_routeros_ip_dhcp-server_lease_print_without-paging.textfsm, .*, mikrotik_routeros, [[/]]ip dhcp-server lease print without-paging
@@ -653,6 +664,7 @@ mikrotik_routeros_snmp_community_print_without-paging.textfsm, .*, mikrotik_rout
 mikrotik_routeros_ipv6_neighbor_print_without-paging.textfsm, .*, mikrotik_routeros, [[/]]ipv6 neighbor print without-paging
 mikrotik_routeros_log_print_detail_without-paging.textfsm, .*, mikrotik_routeros, [[/]]log p[[rint]] d[[etail]] wi[[thout-paging]]
 mikrotik_routeros_ip_arp_print_without-paging.textfsm, .*, mikrotik_routeros, [[/]]ip arp print without-paging
+mikrotik_routeros_ip_address_export_verbose.textfsm, .*, mikrotik_routeros, [[/]]ip a[[ddress]] e[[xport]] [[verbose]]
 mikrotik_routeros_interface_ethernet_print.textfsm, .*, mikrotik_routeros, [[/]]in[[terface]] et[[hernet]] pr[[int]]
 mikrotik_routeros_system_routerboard_print.textfsm, .*, mikrotik_routeros, [[/]]system routerboard print
 mikrotik_routeros_ip_route_print_terse.textfsm, .*, mikrotik_routeros, [[/]]ip(v6)? route print terse
