@@ -24,14 +24,16 @@ Start
   ^\s*No\sexport.*\s*$$
   ^\s*No\sglobal.*\s*$$
   ^\s*VRF\slabel.*\s*$$
+  ^\s*vrf-conn-aggr\s*.*$$
   ^\s*Address\sfamily.*\s*$$
   ^\s*New\sCLI\sformat.*\s*$$
   ^\s*Old\sCLI\sformat.*\s*$$
   ^. -> Error
 
 Interfaces
-  ^\s+${INTERFACES}\s+ -> Continue
-  ^\s+[\w\./-]+\s+${INTERFACES}\s*$$
+  ^\s+${INTERFACES} -> Continue
+  ^\s+[\w\./-]+\s+${INTERFACES} -> Continue
+  ^\s+[\w\./-]+\s+[\w\./-]+\s+${INTERFACES}\s*$$
   ^\s*Address\sfamily.+$$ -> Start
   
 Rt_Export

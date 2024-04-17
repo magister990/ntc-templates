@@ -1,0 +1,30 @@
+---
+parsed_sample:
+  - vrf: "clinical"
+    rd: "<not set>"
+    vpn_id: "<not set>"
+    description: "ClinicalTraffic"
+    rt_import: []
+    rt_export: []
+    interfaces:
+      - Vl755
+      - Vl756
+      - Vl1213
+      - Vl1216
+      - Vl1219
+      - Vl1222
+      - Vl1225
+      - Vl1228
+      - Vl1231
+      - Vl1234
+      - Vl1237
+      - Vl1240
+      - Vl73
+      - Vl74
+      - Vl75
+      - Vl76
+      - Vl78
+      - Vl79
+      - Vl81
+      - Vl1725
+      - Vl486
