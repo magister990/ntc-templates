@@ -9,6 +9,7 @@ Value List INTERFACES ([\w\./-]+)
 Start
   ^\s*VRF\s.+default\sRD\s.+;\sdefault\sVPNID\s.+$$ -> Continue.Record
   ^\s*Old\sCLI\sformat,\ssupports\s\S+\sonly
+  ^\s*New\sCLI\sformat,\ssupports\s\S+\saddress-families
   ^\s*Flags:\s\S+
   ^\s*\s*VRF\s${VRF}\s.+;\sdefault\sRD\s${RD};\sdefault\sVPNID\s${VPN_ID}\s*$$
   ^\s*\s*Description:\s${DESCRIPTION}
@@ -27,7 +28,8 @@ Start
   ^. -> Error
 
 Interfaces
-  ^\s*${INTERFACES}\s*$$
+  ^\s+${INTERFACES}\s+ -> Continue
+  ^\s+[\w\./-]+\s+${INTERFACES}\s*$$
   ^\s*Address\sfamily.+$$ -> Start
   
 Rt_Export

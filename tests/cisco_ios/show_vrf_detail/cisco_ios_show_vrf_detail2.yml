@@ -1,0 +1,9 @@
+---
+parsed_sample:
+  - vrf: "Mgmt-vrf"
+    rd: "<not set>"
+    vpn_id: "<not set>"
+    description: ""
+    rt_import: []
+    rt_export: []
+    interfaces: ["Gi0/0", "Te0/1"]
