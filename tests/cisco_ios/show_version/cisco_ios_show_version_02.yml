@@ -1,0 +1,21 @@
+---
+parsed_sample:
+  - software_image: "XR"
+    version: "7.3.2"
+    release: ""
+    rommon: ""
+    hostname: "System"
+    uptime: "2 years 20 weeks 1 day 8 hours 50 minutes"
+    uptime_years: "2"
+    uptime_weeks: "20"
+    uptime_days: "1"
+    uptime_hours: "8"
+    uptime_minutes: "50"
+    reload_reason: ""
+    running_image: ""
+    hardware:
+      - "ASR9K"
+    serial: []
+    config_register: ""
+    mac_address: []
+    restarted: ""
