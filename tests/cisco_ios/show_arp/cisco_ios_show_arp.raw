@@ -1,6 +1,30 @@
-Protocol  Address          Age (min)  Hardware Addr   Type   Interface
-Internet  10.100.88.1             -   c4f7.d564.b716  ARPA   Vlan10
-Internet  10.100.88.199           0   Incomplete      ARPA
-Internet  10.152.1.229            0   488f.5a5a.87ea  ARPA   Vlan1
-Internet  1.2.3.4                 0   c4ad.3425.b7be  ARPA   FastEthernet4
-Internet  1.2.3.5                 -   c4f7.d564.b71a  ARPA   FastEthernet4
+-------------------------------------------------------------------------------
+0/1/CPU0
+-------------------------------------------------------------------------------
+Address         Age        Hardware Addr   State      Type  Interface
+199.165.154.1   -          b026.806e.45f4  Interface  ARPA  GigabitEthernet0/1/0/20
+199.165.154.2   00:00:04   0000.0000.0000  Incomplete ARPA  GigabitEthernet0/1/0/20
+199.165.154.3   00:00:04   0000.0000.0000  Incomplete ARPA  GigabitEthernet0/1/0/20
+199.165.154.5   00:00:02   0000.0000.0000  Incomplete ARPA  GigabitEthernet0/1/0/20
+199.165.154.6   00:00:04   0000.0000.0000  Incomplete ARPA  GigabitEthernet0/1/0/20
+199.165.154.42  -          b026.806e.45e7  Interface  ARPA  TenGigE0/1/0/7
+199.165.154.43  03:47:32   f04a.02c1.5d7f  Dynamic    ARPA  TenGigE0/1/0/7
+199.165.154.164 00:00:29   b40c.25e1.4047  Dynamic    ARPA  BVI524
+199.165.154.172 00:11:01   647c.e892.8c25  Dynamic    ARPA  BVI524
+199.165.154.173 00:00:29   b40c.25e1.4055  Dynamic    ARPA  BVI524
+199.165.154.175 00:00:29   b40c.25e1.4057  Dynamic    ARPA  BVI524
+199.165.154.177 02:38:58   0cc4.7ae3.fa0a  Dynamic    ARPA  BVI524
+199.165.154.178 00:00:02   0cc4.7ae3.fa0a  Dynamic    ARPA  BVI524
+199.165.154.180 00:08:17   885a.9211.6927  Dynamic    ARPA  BVI524
+199.165.154.181 03:03:01   885a.9211.6b2b  Dynamic    ARPA  BVI524
+199.165.154.186 00:29:02   3cec.ef3a.9d50  Dynamic    ARPA  BVI524
+199.165.154.188 00:00:03   3cec.ef3a.9d50  Dynamic    ARPA  BVI524
+199.165.154.229 00:00:02   683a.1e87.c0e3  Dynamic    ARPA  BVI524
+199.165.154.253 -          b026.8035.bfff  Interface  ARPA  BVI524
+
+-------------------------------------------------------------------------------
+0/0/CPU0
+-------------------------------------------------------------------------------
+Address         Age        Hardware Addr   State      Type  Interface
+199.165.154.40  -          b026.801e.2767  Interface  ARPA  TenGigE0/0/0/7
+199.165.154.41  02:55:49   f04a.02c1.5e1f  Dynamic    ARPA  TenGigE0/0/0/7

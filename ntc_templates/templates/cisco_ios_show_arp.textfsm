@@ -1,16 +1,21 @@
-Value PROTOCOL (\S+)
-Value ADDRESS (\S+)
-Value AGE_MIN (\S+)
-Value HARDWARE_ADDRESS ((?:([a-f0-9]{4}\.){2}[a-f0-9]{4})|Incomplete)
-Value TYPE (\S+)
-Value INTERFACE (\S+)
+# While some ios devices show the same output for 'show arp' and 'show ip
+# arp' the ASR9K only works with 'show arp' however, the output is
+# different.  This file has been modified for just ASR9K.
+Value Required IP_ADDRESS (\S+)
+Value AGE ([0-9:]{8})
+Value Required MAC_ADDRESS (([a-f0-9]{4}\.){2}[a-f0-9]{4})
+Value Required TYPE (\S+)
+Value Required STATE (\S+)
+Value Required INTERFACE (\S+)
 
 Start
-  ^\s*Protocol\s+Address\s+Age\s+\(min\)\s+Hardware\s+Addr\s+Type\s+Interface\s*$$ -> ArpTable
+  ^\s*Address\s+Age\s+Hardware\s+Addr\s+State\s+Type\s+Interface\s*$$ -> ArpTable
   ^\s*$$
+  ^\s*[-]+$$
+  ^\s*[0-9/CPU]+$$
   ^. -> Error
 
 ArpTable
-  ^\s*${PROTOCOL}\s+${ADDRESS}\s+${AGE_MIN}\s+${HARDWARE_ADDRESS}\s+${TYPE}(?:\s+${INTERFACE})?\s*$$ -> Record
+  ^\s*${IP_ADDRESS}\s+(:?${AGE}|-)\s+${MAC_ADDRESS}\s+${STATE}\s+${TYPE}\s+${INTERFACE}\s*$$ -> Record
   ^\s*$$
-  ^. -> Error
+  ^.* -> Start
