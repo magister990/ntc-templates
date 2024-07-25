@@ -33,6 +33,7 @@ Start
   ^admin\s+state\s+is\s+${ADMIN_STATE},
   ^admin\s+state\s+is\s+${ADMIN_STATE}$$
   ^\s+Hardware(:|\s+is)\s+${HARDWARE_TYPE},\s+address(:|\s+is)\s+${MAC_ADDRESS}(.*bia\s+${BIA})*
+  ^\s+Hardware(:|\s+is)\s+${HARDWARE_TYPE}$$
   ^\s+Description:\s+${DESCRIPTION}\s*$$
   ^\s+Internet\s+Address\s+is\s+${IP_ADDRESS}\/${PREFIX_LENGTH}
   ^\s+Port\s+mode\s+is\s+${MODE}
@@ -40,9 +41,13 @@ Start
   ^\s+MTU\s+${MTU}.*BW\s+${BANDWIDTH}.*DLY\s+${DELAY}
   ^\s+Encapsulation\s+${ENCAPSULATION}(,)?(\s+Virtual\s+LAN,\s+Vlan\s+ID\s+${VLAN_ID},)?
   ^\s+${INPUT_PACKETS}\s+input\s+packets\s+\d+\s+bytes\s*$$
+  ^\s+${INPUT_PACKETS}\s+packets\s+input\s+\d+\s+bytes\s*$$
   ^\s+${INPUT_ERRORS}\s+input\s+error\s+\d+\s+short\s+frame\s+\d+\s+overrun\s+\d+\s+underrun\s+\d+\s+ignored\s*$$
+  ^\s+${INPUT_ERRORS}\s+input\s+errors\s+\d+\s+frame\s+\d+\s+overrun\s+\d+\s+fifo*$$
   ^\s+${OUTPUT_PACKETS}\s+output\s+packets\s+\d+\s+bytes\s*$$
+  ^\s+${OUTPUT_PACKETS}\s+packets\s+output\s+\d+\s+bytes\s+\d+\s+underruns\s*$$
   ^\s+${OUTPUT_ERRORS}\s+output\s+error\s+\d+\s+collision\s+\d+\s+deferred\s+\d+\s+late\s+collision\s*$$
+  ^\s+${OUTPUT_ERRORS}\s+output\s+errors\s+\d+\s+collisions\s+\d+\s+fifo\s*$$
   ^\s+Last\s+link\s+flapped\s+${LAST_LINK_FLAPPED}\s*$$
   ^\s+\d+\s+seconds\s+input\s+rate\s+${BANDWIDTH_INPUT_RATE}\s+bits/sec,\s+${PACKET_INPUT_RATE}\s+packets/sec
   ^\s+\d+\s+seconds\s+output\s+rate\s+${BANDWIDTH_OUTPUT_RATE}\s+bits/sec,\s+${PACKET_OUTPUT_RATE}\s+packets/sec
